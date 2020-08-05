@@ -37,7 +37,7 @@ const UploadImage = () => {
       const cFile = await imageCompression(inputFile, options);
       showImagePreview(cFile);
       setCompressedFile(cFile);
-      console.log('cfile', cFile.size/1000, cFile);
+      // console.log('cfile', cFile.size/1000, cFile);
       if(cFile.size/1000 > 1000) {
         setCompressedImageSize(`${cFile.size/1000/1000} mb`);
       } else {
@@ -55,8 +55,7 @@ const UploadImage = () => {
       setErrorMessage('Failure to Compress File, Please try again later')
     }
   }
-
-  const handlePreview = async (e) => {
+  const handleCompress = async (e) => {
     e.preventDefault();
     if(compressedFile.name === fileName) {
       //image is already shown so do nothing
@@ -67,8 +66,6 @@ const UploadImage = () => {
       }
     }
   }
-
-  
 
   return (
     <div className="upload-post-parent">
@@ -84,9 +81,8 @@ const UploadImage = () => {
             <input type="file" accept="image/*" className="file-input" onChange={handleImageChange}/>
           </label>
           <div className="button-parent">
-            {/* <input type="submit" className="button" value="Compress" /> */}
-            <a href={compressedFileUrl} target={compressedFile} download={`${fileName}`}>Download</a>
-            <input type="submit" className="button" value="Preview" onClick={handlePreview}/>
+            <a href={compressedFileUrl} target={compressedFile} download={`${fileName}`} className="button">Download</a>
+            <input type="submit" className="button" value="Compress" onClick={handleCompress}/>
           </div>
         </form>
         <div className="compressed-image-size">

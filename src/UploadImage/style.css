@@ -121,3 +121,9 @@
   text-align: center;
   margin: 0.3rem;
 }
+
+a {
+  text-decoration: none;
+  color: var(--text-accent);
+  text-align: center;
+}
