@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import imageCompression from 'browser-image-compression';
 import './style.css';
 
@@ -73,7 +73,7 @@ const UploadImage = () => {
         <h1>Compress your Image</h1>
         {errorMessage && <p className="error">{errorMessage}</p>}
         <form>
-          <label className="size-label" for="image-size">Max Width or Height</label>
+          <label className="size-label" htmlFor="image-size">Max Width or Height</label>
           <input id="image-size" type="number" value={imageDimensions} className="image-size-input" onChange={(e) => {setImageDimensions(e.target.value)}}></input>
           <label className="custom-file-input">
             <span className="file-name">{fileName}</span>
