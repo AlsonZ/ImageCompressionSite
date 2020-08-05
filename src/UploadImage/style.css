@@ -1,0 +1,123 @@
+.upload-post-parent {
+  width: 65rem;
+  height: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.upload-post {
+  width: 95%;
+  min-height: 95%;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--box-bg);
+  border: var(--border);
+}
+
+.upload-post h1 {
+  font-weight: normal;
+  text-align: center;
+  color: var(--text-accent);
+}
+
+.upload-post form {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-post form .custom-file-input {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.upload-post form .custom-file-input .file-name {
+  float: left;
+  text-align: center;
+  padding: 0.6rem;
+  color: var(--text);
+}
+.upload-post form .custom-file-input .browse {
+  background-color: var(--item-bg);
+  color: var(--text-accent);
+  float: right;
+  padding: 0.6rem;
+}
+.upload-post form .file-input {
+  position: fixed;
+  right: 100%;
+  bottom: 100%;
+}
+.upload-post form .button-parent {
+  display: flex;
+  flex-direction: row;
+}
+.upload-post form .button-parent .button:nth-child(1) {
+  color: var(--text-accent);
+}
+.upload-post form .button-parent .button {
+  background-color: var(--item-bg);
+  color: var(--text);
+  font-size: 1.3rem;
+  padding: 0.6rem;
+  margin: 1rem;
+  margin-top: 0.5rem;
+  border: var(--border);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  width: 50%;
+}
+
+.upload-post .img-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-post .img-parent img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.upload-post .error {
+  text-align: center;
+  color: red;
+  margin-left: 1rem;
+}
+
+.size-label {
+  text-align: center;
+  margin: 0rem auto;
+}
+
+.image-size-input {
+  color: var(--text);
+  background-color: var(--item-bg);
+  border: var(--border);
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  margin: 0.5rem auto;
+}
+.image-size-input:hover {
+  filter: brightness(110%);
+}
+.image-size-input:focus {
+  outline: none;
+  border-color: var(--text-accent);
+}
+
+.compressed-image-size {
+  place-items: center;
+}
+.compressed-image-size p{
+  text-align: center;
+  margin: 0.3rem;
+}
